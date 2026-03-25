@@ -1,1 +1,21 @@
+sqlite> .read /home/irrz/Escritorio/mi_proyecto_nike/Nike_data_model.sql
+sqlite> .tables
+marcas     nike_raw   productos
+sqlite> .select productos
+Error: unknown command or invalid arguments:  "select". Enter ".help" for help
+sqlite> SELECT * FROM productos
+   ...> ;
+001|Air Max 90|1|120|100|20|Zapato deportivo|4.5|150
+002|Air Force 1|1|110|90|18|Clásico urbano|4.7|200
+sqlite> SELECT 
+    p.nombre,
+    m.nombre AS marca,
+    p.precio_lista,
+    p.precio_venta,
+    p.descuento,
+    p.rating
+FROM productos p
+JOIN marcas m ON p.id_marca = m.id_marca;
+Air Max 90|Nike|120|100|20|4.5
+Air Force 1|Nike|110|90|18|4.7
 
