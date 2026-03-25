@@ -1,3 +1,9 @@
+# Proyecto: Segmentación No Supervisada del Dataset Iris mediante K-Means
+# Autor: Irvin Romero
+# Descripción:
+# Análisis de clustering sobre el dataset Iris utilizando K-Means y el método del 
+# codo para determinar el número óptimo de grupos
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
